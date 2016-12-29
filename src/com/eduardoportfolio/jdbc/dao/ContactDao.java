@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.eduardoportfolio.jdbc.ConnectionFactory;
+import com.eduardoportfolio.jdbc.exception.DAOException;
 import com.eduardoportfolio.jdbc.model.Contact;
 
 public class ContactDao {
@@ -84,7 +85,7 @@ public class ContactDao {
 			return contacts;
 			
 		} catch (SQLException e){
-			throw new RuntimeException (e);
+			throw new DAOException (e);
 		}
 	}
 }
