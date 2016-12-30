@@ -11,9 +11,9 @@ public class InsertionTest {
 		
 		//data to record
 		Contact contact = new Contact();
-		contact.setName("Eduardo Geralde");
-		contact.setEmail("eduardo_geralde@hotmail.com");
-		contact.setAddress("Sunshine Boulevard, 458 - North Coast");
+		contact.setName("Paulo Augusto");
+		contact.setEmail("paulo_augusto@hotmail.com");
+		contact.setAddress("Sunrise Street, 3453 - DownTown");
 		contact.setBirthDate(Calendar.getInstance());
 		
 		//record in this connection

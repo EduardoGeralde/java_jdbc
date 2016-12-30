@@ -21,7 +21,8 @@ public class ContactDao {
 	}
 
 	public void add(Contact contact) {
-		String sql = "insert into contacts " + "(name, email, address, birthDate)" + " values (?,?,?,?)";
+		
+		String sql = "insert into contacts (name, email, address, birthDate) values (?,?,?,?)";
 
 		try {
 			// prepare statement for insertion
@@ -38,6 +39,7 @@ public class ContactDao {
 
 			// close preparedStatement
 			stmt.close();
+			connection.close();
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -78,6 +80,7 @@ public class ContactDao {
 
 			rs.close();
 			stmt.close();
+			connection.close();
 
 			return contacts;
 
@@ -99,14 +102,15 @@ public class ContactDao {
 			ResultSet rs = stmt.executeQuery();
 
 			if (rs.next()) {
-				contact = new Contact();
 				contact.setId(rs.getLong("id"));
 				contact.setName(rs.getString("name"));
 				contact.setEmail(rs.getString("email"));
 				contact.setAddress(rs.getString("address"));
 			}
-			connection.close();
+			
+			rs.close();
 			stmt.close();
+			connection.close();
 
 			return contact;
 		} catch (SQLException e) {
