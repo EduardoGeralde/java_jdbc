@@ -19,8 +19,8 @@ public class InsertionTest {
 		//record in this connection
 		ContactDao dao = new ContactDao();
 		
-		//method to add
-		dao.add(contact);
+		//method to create
+		dao.create(contact);
 		
 		System.out.println("Data recorded !");
 	}
