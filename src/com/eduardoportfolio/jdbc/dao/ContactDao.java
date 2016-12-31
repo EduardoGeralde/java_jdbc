@@ -155,6 +155,7 @@ public class ContactDao {
 			stmt.execute();
 			
 			stmt.close();
+			
 		} catch (SQLException e){
 			throw new DAOException (e);
 		}
