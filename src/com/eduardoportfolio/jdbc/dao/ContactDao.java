@@ -12,6 +12,13 @@ import com.eduardoportfolio.jdbc.ConnectionFactory;
 import com.eduardoportfolio.jdbc.exception.DAOException;
 import com.eduardoportfolio.jdbc.model.Contact;
 
+/**
+ * @author Eduardo Geralde Neto
+ * 
+ * This ContactDao class has our CRUD. This represents our basics methods of persistent storage.
+ * The only responsible to access, change, add and remove our data.
+ */
+
 public class ContactDao {
 
 	private Connection connection;
