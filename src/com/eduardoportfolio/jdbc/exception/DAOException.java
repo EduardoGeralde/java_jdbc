@@ -5,7 +5,7 @@ import java.sql.SQLException;
 /**
  * @author Eduardo Geralde Neto
  * 
- * Exception created to use in the methods of our ContactDao Class.
+ * Exception created to use in the methods of our ContactDao Class
  */
 
 public class DAOException extends RuntimeException {
